@@ -2,12 +2,12 @@ package Exercicio_de_autorevisao;
 
 
 
-public class ContaCorrente {
+public class ContaCorrente_q10 {
     private float limite;
     private float saldo;
     private float valorLimite;
 
-    public ContaCorrente( float saldo, float valorLimite){
+    public ContaCorrente_q10(float saldo, float valorLimite){
         if(saldo<0||valorLimite<0){
             throw new IllegalArgumentException("Saldo e limite não podem ter o seu valor negativo");
 
@@ -85,7 +85,7 @@ public class ContaCorrente {
 
     public static void main(String[] args) {
         try {
-            ContaCorrente c1 = new ContaCorrente(500.0f, 200.0f);
+            ContaCorrente_q10 c1 = new ContaCorrente_q10(500.0f, 200.0f);
 
             System.out.println(c1);
 
@@ -95,7 +95,7 @@ public class ContaCorrente {
         }
 
         try {
-            ContaCorrente c2 = new ContaCorrente(500.0f, 200.0f);
+            ContaCorrente_q10 c2 = new ContaCorrente_q10(500.0f, 200.0f);
 
             c2.depositar(-100.0f);
         } catch (IllegalArgumentException e) {
@@ -103,7 +103,7 @@ public class ContaCorrente {
         }
 
         try {
-            ContaCorrente c3 = new ContaCorrente(500.0f, 200.0f);
+            ContaCorrente_q10 c3 = new ContaCorrente_q10(500.0f, 200.0f);
 
             c3.setValorLimite(-50.0f);
         } catch (IllegalArgumentException e) {
